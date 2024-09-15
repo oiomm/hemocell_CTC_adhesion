@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<hemocell>
+
+<verbose>
+<cellsDeletedInfo>0</cellsDeletedInfo> <!-- Give information about the location of deleted cells, this option impacts performance -->
+</verbose>
+
+<parameters>
+    <warmup> 100 </warmup> <!-- Number of LBM iterations to prepare fluid field. -->
+    <outputDirectory>output</outputDirectory> <!-- This is the base directory, appended with _x when it already exists -->
+    <checkpointDirectory>checkpoint</checkpointDirectory> <!-- relative to outputDirectory -->
+    <logDirectory>log</logDirectory> <!-- relative to outputDirectory -->
+    <logFile>logfile</logFile> <!-- relative to logDirectory, if it exists (possible with ../log as logDirectory), add .x for a new version -->
+</parameters>
+
+
+<ibm>
+    <stepMaterialEvery> 20 </stepMaterialEvery> <!-- Update particle material model after this many fluid time steps. -->
+    <stepParticleEvery> 5 </stepParticleEvery> <!-- Update particles position after this many fluid time steps. -->
+</ibm>
+
+<domain>
+    <geometry> tube.stl </geometry>
+    <fluidEnvelope> 2 </fluidEnvelope>
+    <rhoP> 1000 </rhoP>   <!--Density of the surrounding fluid, Physical units [kg/m^3]-->
+    <nuP> 1.1e-6 </nuP>   <!-- Kinematic viscosity of blood plasma, physical units [m^2/s]-->
+    <dx> 5e-7 </dx> <!--Physical length of 1 Lattice Unit -->
+    <dt> 1e-7 </dt> <!-- Time step for the LBM system. A negative value will set Tau=1 and calc. the corresponding time-step. -->
+    <refDir> 1 </refDir>   <!-- Used for resloution  setting and  Re calculation as well -->
+    <refDirN> 24 </refDirN>  <!-- Number of numerical cell in the reference direction -->
+    <blockSize> -1 </blockSize>
+    <kBT> 4.100531391e-21 </kBT> <!-- in SI, m2 kg s-2 (or J) for T=300 -->
+    <Re> 0.015 </Re>   <!--Reynolds number0.025-->
+    <particleEnvelope> 25 </particleEnvelope>
+    <kRep>2e-22 </kRep> <!-- Repulsion Constant -->
+    <BkRep>1.0e-7</BkRep> <!-- Repulsion Constant 1.0e-7-->	
+    <RepCutoff> 0.7 </RepCutoff> <!-- RepulsionCutoff -->
+    <BRepCutoff> 1.0 </BRepCutoff> <!-- RepulsionCutoff um-->
+</domain>
+
+<sim>
+    <tmax> 1500000 </tmax> <!-- total number of iterations 450000-->
+    <tmeas>  3000 </tmeas> <!-- interval after which data is written --> 
+    <tcsv>  1000 </tcsv> <!-- interval after which simple mean cell values are written to a CSV file --> 
+    <tcheckpoint> 100000 </tcheckpoint> 
+    <interiorViscosity>10</interiorViscosity>
+    <interiorViscosityEntireGrid>1000</interiorViscosityEntireGrid>
+</sim>
+
+</hemocell>

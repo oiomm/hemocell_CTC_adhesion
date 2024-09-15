@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<hemocell>
+<MaterialModel>
+    <comment>Parameters for the stage V gametocyte constitutive model.</comment>
+    <name>CTC</name>
+    <eta_m> 0.0 </eta_m> <!-- Membrane viscosity. [1e-9 Ns/m]1.0e-9-->
+    <kBend> 800 </kBend> <!-- Bending force modulus for membrane + cytoskeleton ( in k_BT units, 4.142e-21 N m) [200] 800-->
+    <kVolume> 200</kVolume> <!-- Volume conservation coefficient (dimensionless) [20] 200--> 
+    <kArea> 50 </kArea> <!--Local area conservation coefficient (dimensionless) 4xrbc [20] 50--> 
+    <!-- NOTE: kBend should != kArea. The larger the difference, the more stable the model -> they are competing forces under some circumstances. -->
+    <kLink> 200 </kLink> <!-- Link force coefficient (dimensionless) 4xrbc [60.0] 400-->
+    <kInnerRigid> 6.40625e-12 </kInnerRigid> <!-- Link force coefficient of the inner links -->
+    <kCytoskeleton> 6.40625e-15 </kCytoskeleton> <!-- Coefficient of the cytoskeleton force links -->
+    <coreRadius> 2.5e-6 </coreRadius> <!-- WBC rigid core radius in um -->
+    <radius> 4.0e-6 </radius> <!-- Radius of the WBC in [ 5.0 um] 4.0e-6-->
+    <Volume> 220.893 </Volume> <!-- 2023.12.1Volume of the WBC in µm³ -->
+
+    <minNumTriangles> 600 </minNumTriangles> <!--Minimun numbers of triangles per cell. Not always exact. [642]-->
+
+</MaterialModel>
+</hemocell>
