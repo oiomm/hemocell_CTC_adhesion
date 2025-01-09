@@ -1,15 +1,15 @@
 # Program and Data Files for the Article:
-**A Lattice Boltzmann Study of the Transport and Adhesion of Deformable Circulating Tumor Cells in Bifurcated Microvessels**
+**IB-LBM Study on Circulating Tumor Cell Behavior in Constricted Microvessels**
 
 ## Instructions for Using the Program Files
 
 - Install HemoCell by referring to the official HemoCell link: [https://github.com/UvaCsl/HemoCell](https://github.com/UvaCsl/HemoCell)
-- Copy the contents of the `program` folder to `HemoCell/examples/case_bif`.
+- Copy the contents of the `program` folder to `HemoCell/examples/case_constricted_microvessel`.
 
 ## Program Files
 
-- **`case_bifurcatedvessel.cpp`** - Main Program:  
-  This is the simulation script for the flow and adhesion of a single CTC in a symmetrical bifurcated blood vessel.
+- **`case_constricted_microvessel.cpp`** - Main Program:  
+  This is the simulation script for the flow and adhesion of a single CTC and RBCs in a constricted microvessel.
   
 - **`config.xml`** - Simulation Parameter Configuration File:
   - Sets the number of warm-up iterations for preparing the fluid field.
@@ -33,6 +33,6 @@
 - Standard data format files for ParaView post-processing software, which can be directly imported for viewing.  
   Refer to the ParaView official link: [https://github.com/Kitware/ParaView](https://github.com/Kitware/ParaView)
 
-- Data can be found here ：(https://drive.google.com/file/d/1S2AdW6-yMy9p4g16uwNrXJZ1Hyn5V8h4/view?usp=drive_link)
+- Data can be found here ：()
 
 
