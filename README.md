@@ -26,6 +26,16 @@
 - **`CTC.xml`** - Constitutive model parameters for CTC:  
   Describes the geometry and stiffness of the CTC.
 
+- **`RBC.pos`** - RBC count and positions.
+
+- **`RBC.xml`** - Constitutive model parameters for RBC:  
+  Describes the geometry and stiffness of the RBC.
+
+- **`PLT.pos`** - Platelets count and positions.
+
+- **`PLT.xml`** - Constitutive model parameters for platelets:  
+  Describes the geometry and stiffness of the platelets.
+
 - **`tube.stl`** - Geometry file for the blood vessel.
 
 ## Data Files
@@ -33,6 +43,6 @@
 - Standard data format files for ParaView post-processing software, which can be directly imported for viewing.  
   Refer to the ParaView official link: [https://github.com/Kitware/ParaView](https://github.com/Kitware/ParaView)
 
-- Data can be found here ：(https://drive.google.com/file/d/13Q8gby6-6yXrXHE3Io2YySNwPqISB00s/view?usp=drive_link)
+- Data can be found here ：(https://drive.google.com/file/d/1pxXL0hm-ZpOyDs_0cAGHXatzVPr2ARSh/view?usp=drive_link)
 
 
