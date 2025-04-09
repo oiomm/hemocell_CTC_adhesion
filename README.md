@@ -1,5 +1,5 @@
 # Program and Data Files for the Article:
-**IB-LBM Study on Circulating Tumor Cell Behavior in Constricted Microvessels**
+**Numerical Study of Circulating Tumor Cell Behavior in Constricted Microvessels Based on Immersed Boundary-Lattice Boltzmann Method**
 
 ## Instructions for Using the Program Files
 
